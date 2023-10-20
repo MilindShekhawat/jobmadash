@@ -1,0 +1,49 @@
+.sidebar {
+  height: 100%;
+  width: 16rem;
+  color: white;
+  background-color: #52526d;
+  transition: all .4s linear;
+  position: relative;
+}
+.sidebarCollapsed {
+  height: 100%;
+  width: 6rem;
+  color: white;
+  background-color: #52526d;
+  transition: all .4s linear;
+  position: relative; 
+}
+.sidebarWrapper{
+  position: relative;
+}
+.sidebarButton{
+  position: absolute;
+  right: -3rem;
+  top: 1rem;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.7rem;
+  background-color: rgb(75, 79, 79);
+}
+.sidebarTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.sidebarItem{
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 1rem;
+}
+.sidebarItemIcon{
+  padding-right: 1rem;
+}
+.sidebarItemButton{
+  margin-left: auto;
+}
+/* TESTING */
