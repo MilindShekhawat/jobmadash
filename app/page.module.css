@@ -11,7 +11,7 @@
 /* TODO Collapsed Sidebar */
 .sidebarCollapsed {
   height: 100vh;
-  width: 6rem;
+  width: 70px;
   color: white;
   background-color: #52526d;
   transition: all .2s linear;
@@ -36,7 +36,7 @@
   gap: 10px;
   padding: 15px 20px;
   font-size: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #ffffff1a;
 }
 
 /* ? SideBar List Container */
@@ -53,11 +53,44 @@
   padding: 10px 40px 10px 20px;
 }
 /* ? */
-.sidebarItemIcon{
+.itemIcon{
   height:20px;
   width: 20px;
   margin-bottom: 5px;
 }
-.sidebarItemButton{
+.itemButton{
   margin-left: auto;
+}
+
+/* ? SideBar Bottom Area */
+.sidebarBottom {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+/* ? SideBar Credits Button */
+.credits{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 21px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background-color: #9bca3b;
+}
+
+/* ? Bottom List Container */
+.bottomList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 10px;
+}
+/* ? Bottom List Items */
+.bottomListItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 22px;
+  border-radius: 5px;
 }

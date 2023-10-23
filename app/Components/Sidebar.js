@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import style from '../page.module.css'
 import SidebarItem from './SidebarItem'
+import BottomListItem from './BottomListItem'
 import Image from 'next/image'
 import welcome from '../img/welcome.png'
 
@@ -23,14 +24,30 @@ export default function Sidebar() {
             </div>
           </div>
           <ul className={style.sidebarList}>
-            <SidebarItem name='Positions'/>
-            <SidebarItem name='Setup Interview'/>
-            <SidebarItem name='Applicants'/>
-            <SidebarItem name='Sub Accounts'/>
-            <SidebarItem name='Reports'/>
-            <SidebarItem name='Integrations'/>
-            <SidebarItem name='Billing'/>
+            <SidebarItem itemName='Positions'/>
+            <SidebarItem itemName='Setup Interview'/>
+            <SidebarItem itemName='Applicants'/>
+            <SidebarItem itemName='Sub Accounts'/>
+            <SidebarItem itemName='Reports'/>
+            <SidebarItem itemName='Integrations'/>
+            <SidebarItem itemName='Billing'/>
           </ul>
+          <div className={style.sidebarBottom}>
+            <div className={style.credits}>
+              <div>
+                <span style={{display:'block', fontSize:'13px', margin:'0px'}}>Credits</span>
+                <span style={{display:'block', fontSize:'20px', fontWeight:'500'}}>12345</span>
+              </div>
+              <div style={{background:'#52526d', height:'42px', width:'42px', borderRadius:'50%'}}>
+
+              </div>
+            </div>
+            <ul className={style.bottomList}>
+              <BottomListItem itemName='Get Started' bg='#333333'/>
+              <BottomListItem itemName='Essential Plan' brdr='2px #9bca3b solid'/>
+              <BottomListItem itemName='Training' bg='#00000033'/>
+            </ul>
+          </div>
         </div>
       </aside>
     </div>
