@@ -3,21 +3,28 @@ import React, { useState } from 'react'
 import style from '../page.module.css'
 import SidebarItem from './SidebarItem'
 import BottomListItem from './BottomListItem'
+import Header from './Header'
 import Image from 'next/image'
 import welcome from '../img/welcome.png'
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const collapseSidebar = () => {
+    setIsCollapsed((prev) => !prev)
+    console.log("Changed State");
+  }
+  
   console.log(isCollapsed);
   return (
     <div className={style.sidebarWrapper}>  
       <aside className={isCollapsed ? style.sidebarCollapsed: style.sidebar}>
-      <button className={style.sidebarButton} onClick={() => setIsCollapsed((prev) => !prev)}>
-        {isCollapsed ? "<" : ">"}
-      </button>
+        <button className={style.sidebarButton} onClick={() => collapseSidebar()}>
+          {isCollapsed ? "<" : ">"}
+        </button>
         <div>
           <div className={style.sidebarTop}>
-            <Image src={welcome} width={70} height={70} style={{borderRadius:'5px'}}alt="Welcome" />
+            <Image src={welcome} width={70} height={70} style={{borderRadius:'5px'}} alt="Welcome" />
             <div>
               <span style={{ display:'block', fontSize:'15px', fontWeight:'500'}}>Welcome!</span>
               <span>Jobma Llc</span>
