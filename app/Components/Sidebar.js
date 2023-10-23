@@ -3,30 +3,23 @@ import React, { useState } from 'react'
 import style from '../page.module.css'
 import SidebarItem from './SidebarItem'
 import Image from 'next/image'
-import brief from '../img/briefcase.png'
+import welcome from '../img/welcome.png'
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
-
-  function collapseClick() {
-    console.log("Clicked", setIsCollapsed());
-    setIsCollapsed((prev) => !prev)
-  }
-
+  console.log(isCollapsed);
   return (
     <div className={style.sidebarWrapper}>  
-      <aside className={`${isCollapsed} ? ${style.sidebarCollapsed} : ${style.sidebar}`}>
-      <button className={style.sidebarButton} onClick={() => collapseClick()}>
-       &lt;=
+      <aside className={isCollapsed ? style.sidebarCollapsed: style.sidebar}>
+      <button className={style.sidebarButton} onClick={() => setIsCollapsed((prev) => !prev)}>
+        {isCollapsed ? "<" : ">"}
       </button>
         <div>
           <div className={style.sidebarTop}>
-            <div style={{height:'60px', width:'60px', background:'#707095'}}>
-
-            </div>
+            <Image src={welcome} width={70} height={70} style={{borderRadius:'5px'}}alt="Welcome" />
             <div>
-              <h2>Welcome!</h2>
-              <span>Jobma Inc</span>
+              <span style={{ display:'block', fontSize:'15px', fontWeight:'500'}}>Welcome!</span>
+              <span>Jobma Llc</span>
             </div>
           </div>
           <ul className={style.sidebarList}>
