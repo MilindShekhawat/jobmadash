@@ -1,6 +1,10 @@
 import { Inter, Poppins } from 'next/font/google'
 import Head from 'next/head'
 import './globals.css'
+import style from './page.module.css'
+import Sidebar from './Components/Sidebar'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -21,7 +25,18 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <div style={{display:'flex'}}>
+          <Sidebar/>
+          <div style={{width:'100%'}}>
+            <Header />
+            <div className={style.mainBody}>
+              {children}
+            </div>
+            <Footer/>
+          </div>
+        </div>
+        </body>
     </html>
   )
 }

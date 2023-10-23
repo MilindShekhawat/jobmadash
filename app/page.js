@@ -5,9 +5,8 @@ import Header from './Components/Header'
 
 export default function Home() {
   return (
-    <main style={{display:'flex'}}>  
-      <Sidebar/>
-      <Header />
-    </main>
+    <>   
+    HOME
+    </>
   )
 }

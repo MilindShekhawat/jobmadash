@@ -6,6 +6,7 @@ import BottomListItem from './BottomListItem'
 import Header from './Header'
 import Image from 'next/image'
 import welcome from '../img/welcome.png'
+import Link from 'next/link'
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -20,24 +21,24 @@ export default function Sidebar() {
     <div className={style.sidebarWrapper}>  
       <aside className={isCollapsed ? style.sidebarCollapsed: style.sidebar}>
         <button className={style.sidebarButton} onClick={() => collapseSidebar()}>
-          {isCollapsed ? "<" : ">"}
+          {isCollapsed ? ">" : "<"}
         </button>
         <div>
-          <div className={style.sidebarTop}>
+          <Link href='../' className={style.sidebarTop}>
             <Image src={welcome} width={70} height={70} style={{borderRadius:'5px'}} alt="Welcome" />
             <div>
               <span style={{ display:'block', fontSize:'15px', fontWeight:'500'}}>Welcome!</span>
-              <span>Jobma Llc</span>
+              <span>Jobma LLC</span>
             </div>
-          </div>
+          </Link>
           <ul className={style.sidebarList}>
-            <SidebarItem itemName='Positions'/>
-            <SidebarItem itemName='Setup Interview'/>
-            <SidebarItem itemName='Applicants'/>
-            <SidebarItem itemName='Sub Accounts'/>
-            <SidebarItem itemName='Reports'/>
-            <SidebarItem itemName='Integrations'/>
-            <SidebarItem itemName='Billing'/>
+            <SidebarItem itemName='Positions' link='../position'/>
+            <SidebarItem itemName='Setup Interview' link='../setupinterview'/>
+            <SidebarItem itemName='Applicants' link='../'/>
+            <SidebarItem itemName='Sub Accounts' link='../'/>
+            <SidebarItem itemName='Reports' link='../'/>
+            <SidebarItem itemName='Integrations' link='../'/>
+            <SidebarItem itemName='Billing' link='../'/>
           </ul>
           <div className={style.sidebarBottom}>
             <div className={style.credits}>
