@@ -9,6 +9,8 @@ import settings from '../img/settings.png'
 import yes from '../img/yes.png'
 import no from '../img/no.png'
 import ItemContainer from '../Components/ItemContainer'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 export default function page() {
   const listItems = [
@@ -64,7 +66,9 @@ export default function page() {
   ]
 
   return (
-    <div>
+    <div style={{width:'100%', display:'flex', flexDirection:'column'}}>
+    <Header name="Reports" />
+    <div  className={style.mainBody}>
       <span style={{fontSize:'16px', fontWeight:'500', color:'#000000', display:'block',marginBottom:'20px'}}>Enterprise Plans(Feature)</span>
       <div className={style.contentContainer}>
         {listItems.map((objects) => (
@@ -72,5 +76,7 @@ export default function page() {
           ))}
       </div>
     </div>
+    <Footer/>
+  </div>
   )
 }
