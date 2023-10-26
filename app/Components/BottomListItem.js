@@ -5,7 +5,7 @@ import brief from '../img/briefcase.png'
 
 export default function SidebarItem(bottomBar) {
   return (
-      <div className={style.bottomListItem} style={{background:`${bottomBar.bg}`, border:`${bottomBar.brdr}`}}>
+      <div className={bottomBar.className} style={{display:'flex', alignItems:'center', padding:'10px 22px', borderRadius:'5px'}}>
         <div>
           <Image src={brief} width={18} height={18} style={{borderRadius:'5px'}}alt="Welcome" />
         </div>
