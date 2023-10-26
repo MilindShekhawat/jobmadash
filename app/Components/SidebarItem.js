@@ -76,20 +76,20 @@ export default function SidebarItem(sidebar) {
               <Image src={arrow} width={20} height={20} style={isOpen ? {transform:'rotate(90deg)'} : {transform:'rotate(-90deg)'}} alt='image not found'/>
             </span>
           </div>
-          <div>
           {
-            isOpen ?      
-            sidebar.item.content.map((item) => (
+            isOpen ?  
+            <div style={{background:'#0000001a', paddingBottom:'10px'}}>    
+            {sidebar.item.content.map((item) => (
               <Link href={item.link} key={item} className={style.subList} on={() => setIsActive((prev) => !prev)}>
                 <span className={style.itemIcon}>
                   <Image src={item.image} width={20} height={20} alt='image not found'/>
                 </span> 
                   <span className={style.itemName} style={isActive ? {color:'#9bca3b'} : {}}>{item.title}</span>
               </Link>
-            ))
+            ))}
+            </div>
             : ''
           }
-          </div>
         </div>
       )
     }
