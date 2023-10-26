@@ -83,7 +83,38 @@
   text-decoration: none;
   padding: 6px 40px 6px 50px;
   background-color: #0000001a;
-  height: auto;
+}
+.subListToolTip{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 10px;  
+  padding: 0px 30px 0px 20px;
+  color: #000000;
+  width: max-content;
+}
+.subListToolTip:hover{
+  color: #9bca3b;
+}
+.subListContainer{
+  position: absolute;
+  left: 70px;
+
+}
+.subListContainerToolTip{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 10px 5px;
+  background-color: #ffffff;
+}
+.itemNameToolTip{
+  position: absolute;
+  left: 50px;
+  width: max-content;
 }
 .itemIcon{
   height:20px;
@@ -197,6 +228,13 @@
   width: 42px;
   border-radius: 7px;
   background-color: #ffffff;
+  position: relative;
+}
+.headerItemsToolTip{
+  position: fixed;
+  top: 20px;
+  width: max-content;
+
 }
 .contentContainer{
   columns: 3;
@@ -227,4 +265,16 @@
   border-radius: 5px;
   color: white;
   margin: 10px 16px 4px 30px;
+}
+.toolTip{
+  width: max-content;
+  color: #e4e6eb;
+  background-color: #333333dd;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 10;
+}
+.toolTipHidden{
+  display: none;
 }
